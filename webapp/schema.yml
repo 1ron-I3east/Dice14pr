@@ -1,0 +1,27 @@
+openapi: 3.0.3
+info:
+  title: Dice API
+  version: 1.0.0
+  description: API get data dataframe
+paths:
+  /test/:
+    get:
+      operationId: test_retrieve
+      tags:
+      - test
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          description: No response body
+components:
+  securitySchemes:
+    basicAuth:
+      type: http
+      scheme: basic
+    cookieAuth:
+      type: apiKey
+      in: cookie
+      name: sessionid
